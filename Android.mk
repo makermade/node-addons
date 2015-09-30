@@ -10,6 +10,7 @@ include $(BUILD_PREBUILT)
 #   nodejs will search /system/lib/node instead of /system/lib/node_modules
 $(LOCAL_INSTALLED_MODULE): $(LOCAL_BUILT_MODULE)
 	tar xf $(addsuffix .tar,$<) -C $(TARGET_OUT)
+	rm -f $(@D)/node
 	ln -s node_modules $(@D)/node
 
 # explaination of the quirks:
