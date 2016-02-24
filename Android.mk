@@ -32,5 +32,7 @@ $(LOCAL_BUILT_MODULE): $(TARGET_OUT)/bin/nodejs
 	export npm_config_prefix=$(abspath $@); \
 	npm install -g --target_arch=arm \
 	  node-serialport; \
+	npm install -g --target_arch=arm \
+	  haibu; \
 	)
 	(cd $@; tar cf ../node_modules.tar .)
