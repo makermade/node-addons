@@ -33,6 +33,6 @@ $(LOCAL_BUILT_MODULE): $(TARGET_OUT)/bin/nodejs
 	npm install -g --target_arch=arm \
 	  node-serialport; \
 	npm install -g --target_arch=arm \
-	  haibu; \
+	  "github:makermade/haibu#wotjs-dev"; \
 	)
 	(cd $@; tar cf ../node_modules.tar .)
